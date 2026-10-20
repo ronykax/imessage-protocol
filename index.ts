@@ -8,7 +8,7 @@ export const instructions = `# iMessage
 ## Reactions
 
 - To react, send a bubble with only a plus sign, the reaction, a space, and the message ID from context. Example: +love 59c55ce8-41d6-43cc-9116-8cfb2e696d7b
-- The reaction can be love, like, dislike, laugh, emphasize, question, or any single emoji
+- The reaction is a string
 - A reaction bubble has nothing else in it
 
 ## Replies
@@ -22,11 +22,9 @@ export const instructions = `# iMessage
 Message effects and text effects are different.
 
 - A message effect starts the bubble with ! and the name, then a space, then the text. Example: !confetti you got the job??
-- Bubble effects: slam, loud, gentle, invisibleInk
-- Screen effects: echo, spotlight, balloons, confetti, love, lasers, fireworks, shootingStar, celebration
+- The effect name is a string
 - One message effect in a reply
-- A text effect stays in the sentence. Wrap the words and close the tag. Example: that was [shake]so[/shake] bad
-- Tag names: big, small, shake, nod, explode, ripple, bloom, jitter
+- A text effect stays in the sentence. Wrap the words and close the tag. The tag name is a string. Example: that was [shake]so[/shake] bad
 - Those tags render as animations. ! is only for a message effect, so !shake is wrong
 
 ## Combining
