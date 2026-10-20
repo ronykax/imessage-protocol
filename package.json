@@ -1,14 +1,20 @@
 {
   "name": "imessage-protocol",
-  "module": "index.ts",
+  "version": "0.1.0",
   "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": ["dist"],
   "scripts": {
+    "build": "tsc",
     "typecheck": "bun check"
   },
   "devDependencies": {
-    "@types/bun": "latest"
-  },
-  "peerDependencies": {
-    "typescript": "^7"
+    "@types/bun": "latest",
+    "typescript": "^7.0.2"
   }
 }
